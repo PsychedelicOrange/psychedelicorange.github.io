@@ -1,5 +1,100 @@
 <html>
+    <head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@500&family=Roboto:wght@100;400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">    
+    <link rel="icon" type="image/x-icon" href="./public/Git_trans.png">
+    <meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+    <style>
+       .overlayimage {
+        background-image: url("./public/grid.png");
+        background-repeat: repeat-y repeat-x;
+        background-size: 100px;
+        width: 100vw;
+        height: 100vh;
+        object-fit: cover;
+        position: fixed;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        z-index: -1;
+        }
+    </style>
+            <script type="module" src="./js/hideNavbar.js"></script>
+    </head>
     <body>
-        HI
+        <div class="navbar container">
+            <img src="./public/Git_trans.png" style="padding-top: 10px; width: min(15vw,100px);">
+            <h1 style="vertical-align: middle;"><a style = "font-weight: 400;" href="index.html">PsychedelicOrange</a></h1>&emsp;
+            <h1><a href="projects.html">projects</a></h1>&emsp;
+            <h1><a href="blogpost.html">blog</a></h1>&emsp;
+            <h1><a href="about.html">more</a></h1>
+        </div>
+        <div class="overlayimage">
+            
+        </div>
+        <div style="height: 100px;"></div>
+        <div style="display: flex;align-items: center; justify-content: space-between;background-color: white;margin-top: 0px; padding: 1px; border-radius: 5px;">
+        <h1 style="font-weight: 400;  color: black;font-size: large;">&nbsp;&nbsp;&nbsp;Projects - Portfolio</h1>
+        <a href="projects.html" style="color: black;" onclick="parent.location='projects.html'">see more&nbsp;&nbsp;&nbsp;</a>
+        </div>
+        <div class="card-list" style="margin: 0%;">
+            <a target="_blank"  href="https://github.com/PsychedelicOrange/Psychspiration" class="card-item">
+                <img src="./public/psych.jpg" alt="Card Image">
+                <span class="designer">Game engine</span>
+                <span class="designer">C++</span>
+                <span class="designer">OpenGL</span>
+                <h3>Psychspiration - A hobby game engine</h3>
+                <div class="arrow">
+                    <i class="fas fa-arrow-right card-icon"></i>
+                </div>
+            </a>
+            <a target="_blank"  href="https://github.com/PsychedelicOrange/DroidAsController" class="card-item">
+                <img src="./public/droid.jpeg" alt="Card Image">
+                <span class="developer">Java</span>
+                <span class="developer">Android</span>
+                <span class="developer">Socket Programming</span>
+                <h3>DroidAsController - make your controller wireless !</h3>
+                <div class="arrow">
+                    <i class="fas fa-arrow-right card-icon"></i>
+                </div>
+            </a>
+            <a target="_blank"  href="https://github.com/PsychedelicOrange/mcserver-wo-portforwarding" class="card-item">
+                <img src="./public/minecraft.webp" alt="Card Image">
+                <span class="editor">nodejs module</span>
+                <span class="editor">ngrok</span>
+                <span class="editor">discord bot</span>
+                <h3>Host a minecraft server using nodejs and ngrok</h3>
+                <div class="arrow">
+                    <i class="fas fa-arrow-right card-icon"></i>
+                </div>
+            </a>
+        </div>
+        <div style="display: flex;align-items: center; justify-content: space-between;background-color: white;margin-top: 0px; padding: 1px; border-radius: 5px;">
+        <h1 style="font-weight: 400;  color: black;font-size: large;">&nbsp;&nbsp;&nbsp;Blogposts</h1>
+        <a href="projects.html" style="color: black;">see more&nbsp;&nbsp;&nbsp;</a>
+        </div>
+        <div class="card-list" style="margin: 0%;">
+            <a target="_blank"  href="./blogposts/why_I_started.html" class="card-item">
+                <img src="https://live.staticflickr.com/2930/33901871552_9412eed127_b.jpg" alt="Card Image">
+                <span class="designer">Meta</span>
+                <h3>Why I am writing a blog</h3>
+                <div class="arrow">
+                    <i class="fas fa-arrow-right card-icon"></i>
+                </div>
+            </a>
+            <a target="_blank"  href="./blogposts/learning_rust.html" class="card-item">
+                <img src="./public/ferris.svg" alt="Card Image">
+                <span class="developer">Programming Languages</span>
+                <h3>How Rust is different from C++</h3>
+                <div class="arrow">
+                    <i class="fas fa-arrow-right card-icon"></i>
+                </div>
+            </a>
+        </div>
+        
     </body>
 </html>

@@ -1,0 +1,42 @@
+<html>
+    <head>
+        <style>
+            code{
+                margin: 10px;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Learning rust:</h1>
+        <h2>Example 1: Variables and mutability</h2>
+
+        <p>1. by default variables are immutable in rust.<br>
+        2. rust allows you to declare variables with the same name.<br>
+        so instead of doing
+    <pre><code>
+    let mut x = 5;
+    x = 6;
+    </code></pre> you can do
+    <pre><code>
+    let x = 5;
+    let x = 6; // compiler uses latest definition
+    </code></pre>
+    just so you can write:
+    <pre>
+        <code>
+            let spaces = "   ";
+            let spaces = spaces.len();        
+        </code>
+    </pre>
+        instead of the cpp version
+        <pre>
+        <code>
+            string spaces = "    ";
+            int spaces_length = spaces.length();
+        </code>
+    </pre>
+    which i guess makes it more like python.
+    <h2>Example 2: references , copy and moves</h2>
+    </p>
+    </body>
+</html>

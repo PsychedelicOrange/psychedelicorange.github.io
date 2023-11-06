@@ -1,0 +1,67 @@
+<html>
+    <head>
+<link rel="stylesheet" href="styles/styles.css">
+<script type="module" src="js/hideNavbar.js"></script>
+<link rel="icon" type="image/x-icon" href="./public/Git_trans.png">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+<meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+<style>
+       .overlayimage {
+        background-image: url("./public/grid.png");
+        background-repeat: repeat-y repeat-x;
+        background-size: 100px;
+        width: 100vw;
+        height: 100vh;
+        object-fit: cover;
+        position: fixed;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        z-index: -1;
+        }
+</style>
+    </head>
+    <body>
+        <div class="navbar container">
+            <img src="./public/Git_trans.png" style="padding-top: 10px; width: min(15vw,100px);">
+            <h1 style="vertical-align: middle;"><a style = "font-weight: 400;" href="index.html">PsychedelicOrange</a></h1>&emsp;
+            <h1><a href="projects.html">projects</a></h1>&emsp;
+            <h1><a href="blogpost.html">blog</a></h1>&emsp;
+            <h1><a href="about.html">more</a></h1>
+        </div>
+<div class="overlayimage"></div>
+<div class="card-list" style="margin-top: 100px;">
+    <a target="_blank"  href="https://github.com/PsychedelicOrange/Psychspiration" class="card-item">
+        <img src="./public/psych.jpg" alt="Card Image">
+        <span class="designer">Game engine</span>
+        <span class="designer">C++</span>
+        <span class="designer">OpenGL</span>
+        <h3>Psychspiration - A hobby game engine</h3>
+        <div class="arrow">
+            <i class="fas fa-arrow-right card-icon"></i>
+        </div>
+    </a>
+    <a target="_blank"  href="https://github.com/PsychedelicOrange/DroidAsController" class="card-item">
+        <img src="./public/droid.jpeg" alt="Card Image">
+        <span class="developer">Java</span>
+        <span class="developer">Android</span>
+        <span class="developer">Socket Programming</span>
+        <h3>DroidAsController - make your controller wireless !</h3>
+        <div class="arrow">
+            <i class="fas fa-arrow-right card-icon"></i>
+        </div>
+    </a>
+    <a target="_blank"  href="https://github.com/PsychedelicOrange/mcserver-wo-portforwarding" class="card-item">
+        <img src="./public/minecraft.webp" alt="Card Image">
+        <span class="editor">nodejs module</span>
+        <span class="editor">ngrok</span>
+        <span class="editor">discord bot</span>
+        <h3>Host a minecraft server using nodejs and ngrok</h3>
+        <div class="arrow">
+            <i class="fas fa-arrow-right card-icon"></i>
+        </div>
+    </a>
+</div>
+</body>
+</html>
