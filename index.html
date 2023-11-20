@@ -9,9 +9,10 @@
     <meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
     <style>
        .overlayimage {
-        background-image: url("./public/grid.png");
-        background-repeat: repeat-y repeat-x;
-        background-size: 100px;
+        background-image: url("public/psyellow.png");
+	background-repeat: repeat-x repeat-y;
+	background-size: 250px;
+	opacity: 0.7;
         width: 100vw;
         height: 100vh;
         object-fit: cover;
@@ -22,15 +23,16 @@
         bottom: 0;
         z-index: -1;
         }
+
     </style>
-            <script type="module" src="./js/hideNavbar.js"></script>
+            <script type="module" src="js/hideNavbar.js"></script>
     </head>
-    <body>
+    <body style="bg-color: black;">
         <div class="navbar container">
             <img src="./public/Git_trans.png" style="padding-top: 10px; width: min(15vw,100px);">
             <h1 style="vertical-align: middle;"><a style = "font-weight: 400;" href="index.html">PsychedelicOrange</a></h1>&emsp;
             <h1><a href="projects.html">projects</a></h1>&emsp;
-            <h1><a href="blogpost.html">blog</a></h1>&emsp;
+            <h1><a href="">blog</a></h1>&emsp;
             <h1><a href="about.html">more</a></h1>
         </div>
         <div class="overlayimage">
@@ -73,9 +75,9 @@
                 </div>
             </a>
         </div>
-        <div style="display: flex;align-items: center; justify-content: space-between;background-color: white;margin-top: 0px; padding: 1px; border-radius: 5px;">
+        <!-- <div style="display: flex;align-items: center; justify-content: space-between;background-color: white;margin-top: 0px; padding: 1px; border-radius: 5px;">
         <h1 style="font-weight: 400;  color: black;font-size: large;">&nbsp;&nbsp;&nbsp;Blogposts</h1>
-        <a href="projects.html" style="color: black;">see more&nbsp;&nbsp;&nbsp;</a>
+        <a href="blogpost.html" style="color: black;">see more&nbsp;&nbsp;&nbsp;</a>
         </div>
         <div class="card-list" style="margin: 0%;">
             <a target="_blank"  href="./blogposts/why_I_started.html" class="card-item">
@@ -94,7 +96,7 @@
                     <i class="fas fa-arrow-right card-icon"></i>
                 </div>
             </a>
-        </div>
+        </div> -->
         
     </body>
 </html>
