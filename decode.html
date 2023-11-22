@@ -1,0 +1,67 @@
+<html>
+    <head>
+        <script>
+                function decodeText() {
+                    var inputText = document.getElementById("inputText").value;
+                    var decodedText = atob(inputText);
+                    document.getElementById("outputText").value = "Your secret santa is " + decodedText;
+                }
+        </script>
+        <style>
+            body {
+                font-family: 'Arial', sans-serif;
+                background-image: url('https://assets.entrepreneur.com/content/3x2/2000/20150216173629-santa.jpeg?format=pjeg&auto=webp&crop=16:9&width=675&height=380');
+                margin: 0;
+                padding: 0;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                height: 100vh;
+                background-color: #f4f4f4;
+            }
+
+            .container {
+                text-align: center;
+                max-width: 600px;
+                padding: 20px;
+                background-color: #fff;
+                border-radius: 8px;
+                box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            }
+
+            textarea {
+                width: 100%;
+                margin: 10px 0;
+                padding: 10px;
+                border: 1px solid #ccc;
+                border-radius: 4px;
+            }
+
+            .buttons button {
+                padding: 10px;
+                margin: 0 5px;
+                cursor: pointer;
+                background-color: #4caf50;
+                color: #fff;
+                border: none;
+                border-radius: 4px;
+            }
+
+            .buttons button:hover {
+                background-color: #45a049;
+            }
+
+        </style>
+    </head>
+<body>
+    <div class="heading"></div>
+    <div class="container">
+        <h1 style="color: white;  background-color: red; padding: 10px;">SECRET SANTA SIGMA EDITION</h1>
+    <textarea id="inputText" placeholder="Enter code 😂"></textarea>
+        <div class="buttons">
+            <button onclick="decodeText()">Decode</button>
+        </div>
+        <textarea id="outputText" placeholder="Result" readonly></textarea>
+        </div>  
+</body>
+</html>
