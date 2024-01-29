@@ -1,0 +1,137 @@
+
+button {
+ font-size: 17px;
+ padding: 0.5em 2em;
+ border: transparent;
+ box-shadow: 2px 2px 4px rgba(0,0,0,0.4);
+ background: rgb(31, 33, 35);
+ color: white;
+ border-radius: 4px;
+}
+
+button:hover {
+ background: rgb(2,0,36);
+ background: linear-gradient(90deg, rgb(23, 32, 41) 0%, rgbrgb(12, 18, 19)0%);
+}
+
+button:active {
+ transform: translate(0em, 0.2em);
+}
+
+.input {
+    max-width: 190px;
+    background-color: #f5f5f5;    color: #242424;
+    padding: .15rem .5rem;
+    min-height: 30px;
+    border-radius: 4px;
+    outline: none;
+    border: none;
+    line-height: 1.15;
+    box-shadow: 0px 10px 20px -18px;
+    margin-bottom: 10px;
+  }
+  
+  input:focus {
+    border-bottom: 2px solid #5b5fc7;
+    border-radius: 4px 4px 2px 2px;
+  }
+  
+  input:hover {
+    outline: 1px solid lightgrey;
+  }
+
+.material-symbols-outlined {
+  font-variation-settings:
+  'FILL' 0,
+  'wght' 400,
+  'GRAD' 0,
+  'opsz' 24
+}
+@media (min-width:960px){
+.rotate{
+   width:0px;
+   height:0px;
+}
+.rotate:hover{
+   animation: rotation infinite 10s linear;
+    cursor: pointer;
+}
+}
+@media (max-width:960px){
+.rotate{
+   width:0px;
+   height:0px;
+   animation: rotation infinite 10s linear;
+}
+.rotate:hover{
+    cursor: pointer;
+}
+}
+@keyframes rotation{
+  from{
+    transform:rotate(0deg);
+  }
+  
+  to{
+    transform:rotate(360deg);
+  }
+}
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  h3{
+    padding-left: 0;
+  }
+}
+
+footer {
+  background-color: #000;
+  padding: 30px 0;
+}
+
+.footer-content {
+  display: flex;
+  padding-left: 0.3cm;
+
+  justify-content: space-between;
+}
+
+.contact-info, .social-links {
+  width: 45%;
+}
+
+.social-links ul {
+  list-style: none;
+  padding: 0;
+}
+
+.social-links ul li {
+  margin-bottom: 10px;
+}
+
+.social-links a {
+  text-decoration: none;
+  color: #fff;
+}
+
+.copyright {
+  margin-top: 20px;
+  text-align: center;
+}
+
+/* Add styling for the logo if you have one */
+.logo {
+  max-width: 100px; /* Adjust as needed */
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .footer-content {
+    flex-direction: column;
+  }
+
+  .contact-info, .social-links {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+}

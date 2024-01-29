@@ -1,0 +1,164 @@
+.site{
+    overflow-x: hidden;
+        /* Unnecessary IMHO, uncomment next line to force hidden behavior */
+        /* overflow-x: hidden !important; */
+        /* Additional tunning proposed by the community */
+        position: relative;
+        width: 100%;
+}
+.broken{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+pre{
+    font-size: 1.5vw;
+}
+.broken,.homepage,.projectsandportfolio {
+    background-color: rgb(27, 27, 27);
+    color: rgb(206, 206, 206);
+    font-family: 'Roboto', sans-serif;
+    font-size: large;
+    overflow-x: hidden;
+    width: 100%;
+    margin: 0;  
+}
+.intro{
+    text-align: center;
+    img{
+        height: 250px;
+    }
+}
+header{
+    text-align: center;
+}
+.card-container{
+    display: flex;
+    overflow-x: scroll;
+    padding: 20px;
+    gap: 34px;
+}
+.news{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    max-width: 300px;
+    background-color: rgb(156, 55, 55) ;
+    padding: 15px;
+    text-align: center;
+    h2{
+        font-size: larger;
+        padding: 0.4cm;
+    }
+}
+.box {
+    border: 1px whitesmoke solid;
+    border-radius: 0.2cm;
+    padding: 0px;
+    box-shadow: 0.1px 10px rgb(70, 70, 70);
+    video {
+        max-width: 300px;
+        min-width: 300px;
+        margin: 0;
+        padding: 0;
+    }
+
+    overflow:hidden;
+    flex: 0 0 auto;
+    height: 500px;
+    width: 300px;
+}
+.projects,.posts,.articles{
+    border: 1px whitesmoke solid;
+    border-radius: 0.2cm;
+    padding: 10px;
+    box-shadow: 0.1px 10px rgb(70,70,70);
+}
+.posts,.articles{
+    display: flex;
+    flex-direction: row;
+    gap: 1cm;
+}
+h1,h3{
+    font-family: 'Rozha One', sans-serif;
+    padding-left: 0.5cm;
+}
+a:link,a:visited,a:active{
+    color: lightcoral;
+    text-decoration: none;
+}
+a:hover{
+    color :blueviolet
+}
+h3{
+ color : rgb(125,125,125);
+}
+
+.Rap{
+    background-image: url("optimized_assets/sound_background3.jpg");
+    background-size: 20cm; 
+    background-position-x: -3.8cm;
+    background-position-y: -1.1cm;
+        overflow: hidden;
+border: 0.1cm rgb(16, 33, 68) solid;
+ display: flex;
+ gap: 7.6cm;
+}
+.card{
+    position: relative;
+    text-align: center;
+    img{
+        height: auto;
+        width: 50vw;
+        max-width: 10cm;
+        border: 0.2cm solid silver;
+        border-radius: 500cm;
+        margin: 1cm;
+    } 
+    p{
+        visibility:hidden ;
+    }
+    span{
+        position: absolute;
+        
+    }
+}
+.card:hover{
+    p{
+        visibility: visible;
+    }
+    background-image:url("")
+}
+.sp{
+    background-color: darksalmon;
+    border: 0.5cm white solid;
+    display: flex;
+    align-items: center;
+    color: black;
+    video{
+        max-height: 20cm;
+    }
+    video:hover{
+        cursor: pointer;
+    }
+    div{
+        padding: 2cm;
+    }
+}
+@media (max-width:960px){
+    .Rap{
+        overflow: hidden;
+        background-image:url(optimized_assets/sound_background4.jpg);
+        gap: 0;
+    }
+    .sp{
+        flex-direction: column;
+        video{
+        max-height: unset; 
+        max-width:100vw
+        }
+        border: none;
+    }
+}
