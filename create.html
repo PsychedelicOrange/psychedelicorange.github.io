@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<script src="https://www.google.com/recaptcha/api.js?render=6LdHaGYpAAAAAC1HtwaoGT1P13Z9g2QwPx2tXoLt"></script>
+		<link rel="stylesheet" href="external-styles.css">
+		<body>
+			<div style="display:flex;flex-direction:column;justify-content:center;align-items:center;">
+				<h1>Signup</h1>
+				<input class="input" id="email" type="email" pattern=".+@example\.com" placeholder="email"> </input> 
+				<input class="input" id="username" placeholder="username"> </input> 
+				<input class="input" id="password" placeholder="password"> </input> 
+				<button id="submit">signup</button>	
+			</div>
+			<script>
+				function handleClick(token) {
+					return function() {
+						var password = document.querySelector('#password').value;
+						var username = document.querySelector('#username').value;
+						var email = document.querySelector('#email').value;
+						var data = {
+							password: password,
+							username: username,
+							email: email,
+							token: token
+						};
+
+						fetch('/signup', {
+							headers: {
+								'Accept': 'application/json',
+								'Content-Type': 'application/json'
+							},
+							method: 'post',
+							body: JSON.stringify(data)
+						}).then(response => {
+							if(response.status == 200){
+								window.location.href = "https://psyorange.com/login.html";
+							}
+							else{
+								response.text().then(msg => window.alert(msg));
+							}
+						})
+					}
+				}
+
+				grecaptcha.ready(function() {
+					grecaptcha.execute('6LdHaGYpAAAAAC1HtwaoGT1P13Z9g2QwPx2tXoLt', {action: 'demo'})
+						.then(function(token) {
+							document.querySelector('#submit').addEventListener('click', handleClick(token));
+						});
+				});
+			</script>
+		</body>
+</html>

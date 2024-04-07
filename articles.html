@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Articles</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="external-styles.css">
+	<style>
+article:hover{
+	cursor:pointer;
+}
+		article{
+			border: 1px whitesmoke solid;
+			border-radius: 0.2cm;
+			padding: 10px;
+			box-shadow: 0.1px 10px rgb(70,70,70);
+			margin: 0 10% 0 10%;
+		}
+			p{
+				padding: 0% 10% 0% 10%;
+				font-size:x-large;
+				color: aliceblue;
+				line-height: 1.5;
+			}
+			h1,sub{
+				padding: 0% 10% 0% 10%;
+			}
+	</style>
+
+</head>
+<body class="articlepage">
+    <header>
+		<a href="index.html">Homepage</a> |
+		<a href="projects.html">Projects & Portfolio </a>|
+		<a href="broken.html">Posts </a>|
+		<a href="articles.html">Articles </a>|
+		<a href="broken.html">Creative Corner </a>|
+		<a href="#contact">Contact </a>
+	</header>
+	<article id="mar24">
+		<h1>March forward</h1>
+		<sub>7th April, 2024</sub>
+		<p>
+		I dont want to work, using the pringles can as a dustbin, Taking my first night time flight.
+		</p>
+	</article>
+	<article id="feb24">
+		<h1>February 24 Shenanigans</h1>
+		<sub>4th March, 2024</sub>
+		<p>
+		 From college-goer to a job-goer, AI, enjoying cartoons and reasons to hate low level stuff
+		</p>
+	</article>
+	<article id="interview">
+		<h1>My first job hunt experience</h1>
+		<sub>4th February, 2024</sub>
+		<p>
+		The whole ordeal ( tests, multiple rounds of interview ) of securing a job or internship is so kafkaesque. Candidate selection is based on so many factors that are not dependent / proportional to the candidate skill. Let me give you some background
+		</p>
+	</article>
+	<div style="height:69vh"></div>
+	<script>
+		const interview = document.getElementById("interview");
+		interview.onclick  = () =>{
+			window.open("articles/interview.html");
+		}
+		const feb24 = document.getElementById("feb24");
+		feb24.onclick = () =>{
+			window.open("articles/feb24.html");
+		}
+		const mar24 = document.getElementById("mar24");
+		mar24.onclick = () =>{
+			window.open("articles/mar24.html");
+		}
+	</script>
+	<footer id="contact">
+		<div class="container">
+			<div class="footer-content">
+				<div class="contact-info">
+					<h3>Contact Information</h3>
+						<p>Email: parthsaravade.acad@gmail.com</p>
+					</div>
+					<div class="social-links">
+						<h3>Connect with Me</h3>
+						<ul>
+							<li><a href="https://www.linkedin.com/in/parth-saravade-7662a2234/" target="_blank"
+									rel="noopener noreferrer">LinkedIn</a></li>
+							<li><a href="https://github.com/PsychedelicOrange" target="_blank"
+									rel="noopener noreferrer">GitHub</a></li>
+							<li><a href="https://www.instagram.com/parth_saravade/">Instagram</a></li>
+							<!-- Add more social links as needed -->
+						</ul>
+					</div>
+				</div>
+			</div>
+			<div class="copyright">
+				<div class="container">
+					<p>&copy; 2024 Parth Saravade. All Rights Reserved.</p>
+				</div>
+			</div>
+		</footer>
+</body>
+</html>

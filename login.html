@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<link rel="stylesheet" href="external-styles.css">
+		<body>
+			<div style="display:flex;flex-direction:column;justify-content:center;align-items:center;">
+				<h1>Login</h1>
+				<input class="input" id="email" placeholder="email"> </input> 
+				<input class="input" type="password" id="password" placeholder="password"> </input> 
+				<button id="submit">Login</button>	
+			</div>
+			<script>
+				function handleClick() {
+					return function() {
+						var password = document.querySelector('#password').value;
+						var email = document.querySelector('#email').value;
+						var data = {
+							password: password,
+							email: email,
+						};
+
+						fetch('/Login', {
+							headers: {
+								'Accept': 'application/json',
+								'Content-Type': 'application/json'
+							},
+							method: 'post',
+							body: JSON.stringify(data)
+						}).then(response => response.text().then(data => console.log(data)))
+					}
+				}
+
+				document.querySelector('#submit').addEventListener('click', handleClick());
+			</script>
+		</body>
+</html>
