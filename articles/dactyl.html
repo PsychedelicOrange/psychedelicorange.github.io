@@ -1,0 +1,112 @@
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Building a dactyl manuform</title>
+    	<link rel="stylesheet" href="../styles.css">
+    	<link rel="stylesheet" href="../external-styles.css">
+		<style>
+			p,ul{
+				padding: 0% 10% 0% 10%;
+				font-size:x-large;
+				color: aliceblue;
+				line-height: 1.5;
+			}
+			h1,h2,sub{
+				padding: 0% 10% 0% 10%;
+			}
+			img{
+				width: 100%;
+				border: 10px white solid;
+			}
+		</style>
+	</head>
+	<body class ="article">
+    <header>
+		<a href="../index.html">Homepage</a> |
+		<a href="../projects.html">Projects & Portfolio </a>|
+		<a href="../broken.html">Posts </a>|
+		<a href="../articles.html">Articles </a>|
+		<a href="../broken.html">Creative Corner </a>|
+		<a href="#contact">Contact </a>
+	</header>
+	<h1>
+		I made a crazy ergonomic 3d printed keyboard:
+	</h1>
+	<sub>26th May, 2024</sub>
+	<div style='margin-left:10%'>
+	<blockquote class="twitter-tweet"><p lang="en" dir="ltr">i&#39;m concerned that if programmers can 3d print their own keyboards then all productivity will halt for a period of at least five years</p>&mdash; Paul Ford (@ftrain) <a href="https://twitter.com/ftrain/status/577205992406065152?ref_src=twsrc%5Etfw">March 15, 2015</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script> 
+	</div>
+	<p>
+	The Dactyl Manuform is an open source keyboard on <a href = "https://github.com/abstracthat/dactyl-manuform">github</a>.
+	It is split into two halves, and it has multiple thumb keys. I finished making mine just last week. 
+	<img src ='../optimized_assets/dactylC.jpg'></img>
+	<br>
+	And it went just as planned...
+	<img src ='../optimized_assets/dactylH.jpg'></img>
+	<br>
+	Here's how you can make one:
+	<ul>
+		<li> Generate the .stl(3d files for the case) for the dactyl manuform from this <a href='https://ryanis.cool/dactyl/#manuform:Ch0IBRAEGgNzaXgiA3R3byoDYm94MgZub3JtaWU4ABIQCMYKEKMFGMIDIAMoxgowACIXVQAAEEEYACABXQAAYEBlAAAgQEAASAAy+QGVAwAAIECdAwAAgD+AAwGIAwENAAAAABUAAAAAHeF6NEAlAACQwC0AAEDBNeF6tEA9AAAAAEUAAAAATQAAwEBVAABAwF0AAOBAZTMzYcJtMzMtwnUAALzBeOcCgAHNGIgByCSVATMzF8KdATMzXcKlAWZmysGoAZ8LsAGZF7gB/CXFAQAATMLNAQAAyMHVAQAAQMHYAZwE4AHzF+gBkBz1AQAA6MH9AQAAIMKFAgAAUMGIApsEkALzF5gC4CGlAgAAAMKtAgAAcMG1AgAAAMC4AoQHwAKVEMgChAfVAgAAQMHdAgAAgMHlAgAAQEDoAoQH8AKVEPgChAcqBggAEAAYAQ=='>website </a> </li>
+		<li> I don't have a 3D printer, so I used this service from <a href='https://robu.in/product/3d-printing-service/'>robu.in</a></li>
+		<li> Order keyswitches and keycaps: <a href = 'https://www.reddit.com/r/mkindia/wiki/vendors/'> Vendors in india </a></li>
+		I really wanted xda keycaps, but I couldn't find them online at good rates, So i settled with dsa blanks.
+		<li> Order electronics : Solder equipment, arduino pro micro's, jumper wires, IN4143 Diodes, M3 3mm threaded self tap inserts, flat head screws: <a href= 'https://www.reddit.com/r/india/comments/iquweu/a_guide_for_buying_electronic_components_online/'>Vendors in india</a></li>
+</li>
+	<li> Build the keyboard </li>
+	<img src ='../optimized_assets/dactylI.jpg'></img>
+
+	<li> Flash it with qmk and configure layout</li>
+	<p>
+	Layer 0:
+	<img src ='../optimized_assets/layer0.jpeg'></img>
+	Layer 1:
+	<img src ='../optimized_assets/layer1.jpeg'></img>
+	Layer 2:
+	<img src ='../optimized_assets/layer2.jpeg'></img>
+	I forgot the function keys :skull:
+	</p>
+	<li> Spend time and pain relearning how to type</li>
+	<li>Bragging rights ! ?
+		<aside>I will update my experience of typing with the keyboard once I get around to using it as my main kb.</aside></li> </ul>
+	<h2> Backword </h2>
+	<p>
+	Making this keyboard made me realize how awesome but dificult it is to build anything hardware.
+	Thanks to all awesome people in the keyboard community: The people who designed the keyboards, and the people that forked it, and the people that made build guides for it, so that noobs like me can even attempt this.
+	See : 
+	<ul>
+		<li>The original <a href='https://github.com/adereth/dactyl-keyboard'>dactyl</a> made by Matt Adereth</li>
+		<li>The <a href = 'https://github.com/abstracthat/dactyl-manuform'> dactyl manuform </a>fork by abstracthat</li>
+		<li>This cool <a href='https://www.youtube.com/watch?v=CxNKWNKBLMs' > video guide </a>on how to build the keyboard</li>
+	</ul>
+	</p>	
+	</p>
+		<footer id="contact">
+			<div class="container">
+				<div class="footer-content">
+					<div class="contact-info">
+						<h3>Contact Information</h3>
+						<p>Email: parthsaravade.acad@gmail.com</p>
+					</div>
+					<div class="social-links">
+						<h3>Connect with Me</h3>
+						<ul>
+							<li><a href="https://www.linkedin.com/in/parth-saravade-7662a2234/" target="_blank"
+									rel="noopener noreferrer">LinkedIn</a></li>
+							<li><a href="https://github.com/PsychedelicOrange" target="_blank"
+									rel="noopener noreferrer">GitHub</a></li>
+							<li><a href="https://www.instagram.com/parth_saravade/">Instagram</a></li>
+							<!-- Add more social links as needed -->
+						</ul>
+					</div>
+				</div>
+			</div>
+			<div class="copyright">
+				<div class="container">
+					<p>&copy; 2024 Parth Saravade. All Rights Reserved.</p>
+				</div>
+			</div>
+		</footer>
+		</body>
+		
+		</html>

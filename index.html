@@ -42,6 +42,21 @@ ______  ___  ______ _____ _   _   _____  ___  ______  ___  _   _  ___ ______ ___
     </div>
     <h1>Latest from psyorange</h1>
     <div class="card-container">
+            <div class="box" id="may24">
+                <h2 style="margin:20px;">May-be I missed April</h2>
+				<p style="margin:20px; font-size:larger;">
+				Progress on making my own dumbphone, Playing 3d chess with valorant's text chat ban filter , trying to travel anywhere in bangalore 
+				</p>
+				<a style="margin:20px;"> Read more </a>
+            </div>
+            <div class="box" id="dactyl">
+                <h2 style="margin:20px;">I 3D printed a crazy custom keyboard. </h2>
+				<img class="dactylthumb" src= '../optimized_assets/dactylG.jpg'>
+				<p style="margin:20px; font-size:larger;">
+				Is this how all mainstream keyboards should be ?
+				</p>
+				<a style="margin:20px;"> Read more </a>
+            </div>
             <div class="box" id="mar24">
                 <h2 style="margin:20px;">March forward</h2>
 				<p style="margin:20px; font-size:larger;">
@@ -151,6 +166,14 @@ ______  ___  ______ _____ _   _   _____  ___  ______  ___  _   _  ___ ______ ___
 		  var video = document.querySelector("video")
 		  video.onclick = () =>{
 			  window.open("https://www.instagram.com/p/C1Ebi6hPkx7/")
+		  }
+		  const may24 = document.getElementById("may24");
+		  may24.onclick = () =>{
+			  window.open("articles/may24.html");
+		  }
+		  const dactyl = document.getElementById("dactyl");
+		  dactyl.onclick = () =>{
+			  window.open("articles/dactyl.html");
 		  }
 		  const mar24 = document.getElementById("mar24");
 		  mar24.onclick = () =>{

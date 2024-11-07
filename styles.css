@@ -54,6 +54,9 @@ header{
         padding: 0.4cm;
     }
 }
+.dactylthumb{
+ max-width:100%;
+}
 .box {
     border: 1px whitesmoke solid;
     border-radius: 0.2cm;
@@ -65,7 +68,6 @@ header{
         margin: 0;
         padding: 0;
     }
-
     overflow:hidden;
     flex: 0 0 auto;
     height: 500px;
@@ -163,3 +165,4 @@ border: 0.1cm rgb(16, 33, 68) solid;
         border: none;
     }
 }
+
