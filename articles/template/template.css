@@ -1,0 +1,55 @@
+:root{
+	/* Colors */
+	--bgcolor: rgb(27, 27, 27);
+	--fontcolor: rgb(206, 206, 206);
+	--accentcolor: lightcoral;
+	--accenthighlightcolor: blueviolet;
+	/* Fonts */
+	--font: 'Roboto', sans-serif;
+	--headingfont: 'Rozha One', sans-serif;
+}
+
+body{
+	background-color: var(--bgcolor);
+	color: var(--fontcolor);
+	font-family: var(--font) ;
+}
+
+h1,h2,h3,h4,h5,h6{
+	font-family: var(--headingfont) ;
+}
+h2{
+	text-decoration: underline 4px solid var(--accentcolor);
+}
+h1{
+	background-color: var(--accentcolor);
+	color: var(--bgcolor);
+	border: 3px dashed var(--bgcolor);
+	padding-left: 6px;
+}
+
+a:link,a:visited,a:active{
+    color: var(--accentcolor);
+    text-decoration: none;
+}
+a:hover{
+    color: var(--accenthighlightcolor);
+}
+
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400italic);
+blockquote{
+  font-size: 1em;
+  font-family:Open Sans;
+  font-style:italic;
+  color: var(--fontcolor);
+  line-height:1.6;
+  padding-left: 0.5em;
+  border-left: 8px solid var(--accentcolor);
+  background: var(--backgroundcolor)
+}
+
+blockquote::after{
+  content: '';
+}
+
+

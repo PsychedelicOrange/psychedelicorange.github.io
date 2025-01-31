@@ -1,0 +1,42 @@
+#!/usr/bin/python3
+import sys
+import markdown
+
+def main():
+    if len(sys.argv) != 2:
+        print("Usage: python3 mkhtml.py <input_file.md>")
+        sys.exit(1)
+
+    input_file = sys.argv[1]
+    output_file = input_file.replace('.md', '.html')
+
+    # Read the HTML template
+    with open('template/template.html', 'r') as f:
+        template = f.read()
+
+    # Read the footer
+    with open('template/footer.html', 'r') as f:
+        footer = f.read()
+    # Read the header
+    with open('template/header.html', 'r') as f:
+        header = f.read()
+
+    # Convert Markdown to HTML
+    with open(input_file, 'r') as f:
+        text = f.read()
+    md = markdown.markdown(extensions=['toc'])
+    html_content = md.convert(text)
+
+    # Replace the placeholder in the template with the generated HTML
+    template = template.replace('{{content}}', html_content)
+    template = template.replace('{{header}}', header)
+    template = template.replace('{{footer}}', footer)
+
+    # Write the final HTML to the output file
+    with open(output_file, 'w') as f:
+        f.write(template)
+
+    print(f"Markdown converted to HTML: {output_file}")
+
+if __name__ == "__main__":
+    main()
