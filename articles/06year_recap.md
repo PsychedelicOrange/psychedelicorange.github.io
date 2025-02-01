@@ -1,10 +1,11 @@
 # psyorange 2024 rewind
+> List of things i learnt and did last year
 ## Quick Look - all the cool things 
 * Graduated B.Tech IT.
 * Made my first video game in a gamejam.
 * Walk statistics.
 * Listened to Kendrick, tried the shoegaze genre and got into Tyler the creator's music - albums IGOR and Chromakopia 
-# Below is a comprehensive list - i dont know why i made it tho
+### Below is a comprehensive list - i dont know why i made it tho
 ## This year I learned about
 * Work experience at web based startup
     * Technical debt and realities of Java Spring Boot development and microservice architectures.

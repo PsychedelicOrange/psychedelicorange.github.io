@@ -1,14 +1,38 @@
 #!/usr/bin/python3
 import sys
 import markdown
+import pymdownx.emoji
+import os
+
+extension_configs = {
+    "pymdownx.emoji": {
+        "emoji_index": pymdownx.emoji.gemoji,
+        #"emoji_generator": pymdownx.emoji.to_png,
+        "alt": "short",
+        "options": {
+            "attributes": {
+                "align": "absmiddle",
+                "height": "20px",
+                "width": "20px"
+            },
+        }
+    }
+}
 
 def main():
-    if len(sys.argv) != 2:
-        print("Usage: python3 mkhtml.py <input_file.md>")
-        sys.exit(1)
+    # if len(sys.argv) != 2:
+    #     print("Usage: python3 mkhtml.py <input_file.md>")
+    #     sys.exit(1)
+    md_files = sorted([f for f in os.listdir('.') if f.endswith('.md')],reverse =True)
+    preview_files = [];
+    preview_files_content = [];
 
-    input_file = sys.argv[1]
-    output_file = input_file.replace('.md', '.html')
+    if not md_files:
+        print("No Markdown files found in the current directory.")
+        return
+    print(f"Found {md_files}")
+
+    #input_file = sys.argv[1]
 
     # Read the HTML template
     with open('template/template.html', 'r') as f:
@@ -21,22 +45,49 @@ def main():
     with open('template/header.html', 'r') as f:
         header = f.read()
 
-    # Convert Markdown to HTML
-    with open(input_file, 'r') as f:
-        text = f.read()
-    md = markdown.markdown(extensions=['toc'])
-    html_content = md.convert(text)
+    md = markdown.Markdown(extensions=['toc','pymdownx.emoji'],
+                           extension_configs=extension_configs)
+    
+    for input_file in md_files:
+        # Convert Markdown to HTML
+        with open(input_file, 'r') as f:
+            lines = f.readlines()
+            preview_files.append(lines[:2])
+            preview_files_content.append(md.convert(''.join(lines[:2])))
+            text = ''.join(lines)
+        html_content = md.convert(text)
 
-    # Replace the placeholder in the template with the generated HTML
-    template = template.replace('{{content}}', html_content)
-    template = template.replace('{{header}}', header)
-    template = template.replace('{{footer}}', footer)
+        # Replace the placeholder in the template with the generated HTML
+        output = template.replace('{{content}}', html_content)
+        output = output.replace('{{header}}', header)
+        output = output.replace('{{footer}}', footer)
 
-    # Write the final HTML to the output file
-    with open(output_file, 'w') as f:
-        f.write(template)
+        # Write the final HTML to the output file
+        output_file = input_file.replace('.md', '.html')
+        with open(output_file, 'w') as f:
+            f.write(output)
+        print(f"Markdown converted {input_file} -> {output_file}")
 
-    print(f"Markdown converted to HTML: {output_file}")
+    # Make a index of articles sorted by filename
+    # for content in preview_files:
+    #     index_content += '<li>'
+    #     index_content += f'<h3> {content[0]} </h3> <blockquote> {content[1]} </blockquote>'
+    #     index_content += '</li>'
+    # index_content += '</ul>'
+    # index_content += '<ul>'
 
+    index_content = '<h1> Articles </h2>'
+    index_content += '<ul style = "list-style-type: none;">'
+    for i in range(len(preview_files_content)):
+        index_content += f"<li> <a style='all:unset' href={md_files[i].replace('.md','.html')}>"
+        index_content += preview_files_content[i].replace('h1','h3')
+        index_content += '</a></li>'
+    index_content += '</ul>'
+    index = template.replace('{{content}}', index_content)
+    index = index.replace('{{header}}', header)
+    index = index.replace('{{footer}}', footer)
+    with open('articles.html', 'w') as f:
+            f.write(index)
+    
 if __name__ == "__main__":
     main()

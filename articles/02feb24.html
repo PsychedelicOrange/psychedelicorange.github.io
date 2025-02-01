@@ -22,29 +22,48 @@
 	<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
 		<!-- Template styles -->
 			<!-- Colors and fonts -->
-	<link rel="stylesheet" href="template/template.css">
+	<!--<link rel="stylesheet" href="template/template.css">-->
+	<link rel="stylesheet" href="template/retro.css">
 			<!-- Structure and components-->
-	<link rel="stylesheet" href="template/structure.css">
+	<!--<link rel="stylesheet" href="template/structure.css">-->
 
 
 </head>
 <body>
 	<!-- Website header -->
 	<header>
-	<a href="../index.html">Homepage </a>|
-	<a href="../projects.html">Projects & Portfolio </a>|
-	<a href="../articles.html">Articles </a>|
-	<a href="#contact">Contact </a>
+	<a href="../index.html">Homepage</a> | <a href="../projects.html">Projects & Portfolio</a>|
+	<a href="articles.html">Articles</a> |
+	<a href="../creative.html">Creative Corner</a> |
+	<a href="#contact">Contact</a>
 </header>
 
 	<!-- Article content from md file -->
 	<div class='content'>
-	<h1>February 24</h1>
+	<h1 id="february-24">February 24</h1>
 <blockquote>
 <p>See -  Transformation from college-goer to a job-goer, AI, enjoying cartoons and reasons to hate low level stuff</p>
 </blockquote>
-<p>[TOC]</p>
-<h2>Open AI sora is here to kill artists</h2>
+<div class="toc">
+<ul>
+<li><a href="#february-24">February 24</a><ul>
+<li><a href="#open-ai-sora-is-here-to-kill-artists">Open AI sora is here to kill artists</a></li>
+<li><a href="#music-and-podcasts-i-heard-this-month">Music and podcasts I heard this month</a><ul>
+<li><a href="#music">Music</a></li>
+<li><a href="#podcasts">Podcasts</a></li>
+</ul>
+</li>
+<li><a href="#making-a-phone-from-scratch-and-network-packets">Making a phone from scratch and network packets</a><ul>
+<li><a href="#unexplained-latency">Unexplained latency</a></li>
+<li><a href="#embedded-pain">Embedded pain</a></li>
+</ul>
+</li>
+<li><a href="#we-are-growing-up">We are growing up</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<h2 id="open-ai-sora-is-here-to-kill-artists">Open AI sora is here to kill artists</h2>
 <p>The thought experiment of AI
 I was born in a time where most consumer cameras were still analog.
 I have limited photos of me as a child and nearly no videos from my early childhood.
@@ -60,26 +79,26 @@ This is already a thing with social media like youtube, where recommendations st
 So, what do we do now? We have taken pride in the qualities that make us better from the machine.
 We are artistic, we are creative, something that chatgpt could never be.
 Or could it have written this article ?</p>
-<h2>Music and podcasts I heard this month</h2>
-<h3>Music</h3>
+<h2 id="music-and-podcasts-i-heard-this-month">Music and podcasts I heard this month</h2>
+<h3 id="music">Music</h3>
 <ul>
 <li><a href="https://open.spotify.com/track/4rCuwgRRKaIiHlHDc8Bga6?autoplay=true">we might even be falling in love (interlude)</a></li>
 <li><a href="https://open.spotify.com/track/0CvgLMXEBvuvsyvpXABPnm?autoplay=true">j cole - all my life</a></li>
 <li><a href="https://youtu.be/6F1X_t1SZnQ">j cole - might delete later</a></li>
 </ul>
-<h3>Podcasts</h3>
+<h3 id="podcasts">Podcasts</h3>
 <ul>
 <li><a href="https://open.spotify.com/show/0fg35zGJ4E7JKdhrTivXmt">Therapy Gecko</a><sub>mood.</sub></li>
 <li><a href="https://open.spotify.com/show/3mliji9352UAk3XnWElnDV">My first Million</a><sub>Some of the episodes are very funny, the rare lighthearted business pod</sub></li>
 </ul>
 
-<h2>Making a phone from scratch and network packets</h2>
-<h3>Unexplained latency</h3>
+<h2 id="making-a-phone-from-scratch-and-network-packets">Making a phone from scratch and network packets</h2>
+<h3 id="unexplained-latency">Unexplained latency</h3>
 <p>I really like low level stuff, but once you start writing low level stuff, like working with sockets in C, you have to start learning even lower level stuff! And the scope blows up so much so quickly.
 I was recently trying to send UDP packets over from my android to my laptop, and it was taking 160ms for each packet! Now how do I go about debugging that ? So using my android, laptop and macbook, I tried a different combination of device, languages, and operating systems.
 And only when I was hosting a server on a macbook, and the client was my laptop running linux mint, I was able to get around ~20ms.
 God knows why?</p>
-<h3>Embedded pain</h3>
+<h3 id="embedded-pain">Embedded pain</h3>
 <p>I had to learn some really wild stuff to get a blinking LED on a stm32f103c8t6.
 I had to learn how to solder <a href="https://mightyohm.
 com/blog/2011/04/soldering-is-easy-comic-book/">[see this amazing comic]</a>, i had to learn more about compilers, and toolchains and elf files and ld files what not.
@@ -87,7 +106,7 @@ com/blog/2011/04/soldering-is-easy-comic-book/">[see this amazing comic]</a>, i 
 com/2018/04/02/bare-metal-stm32-programming-part-1-hello-arm/">[see this blog]</a></p>
 <video src="../optimized_assets/stm32.mp4" loop autoplay muted></video>
 
-<h2>We are growing up</h2>
+<h2 id="we-are-growing-up">We are growing up</h2>
 <p>Recently I was talking to my coworkers and realized all of them were married, and after I asked around, some people even had kids! Thats such a stark shift from being around people your age to being around grown ups.
 I also had the opportunity to witness 2 new borns in our extended family this month, and it seems so magical! I cannot imagine how awesome the parents must feel.
 It reminds me of a saying that goes something like "If you are lost in life, do what you would want your (future) son to do in life".
@@ -97,26 +116,20 @@ We have good ideals within us, we just forget about them in this attention hungr
 	<footer id="contact">
 	<div class="container">
 		<div class="footer-content">
-			<div class="contact-info">
-				<h3>Contact Information</h3>
-				<p>Email: parthsaravade.acad + @gmail.com</p>
-			</div>
-			<div class="social-links">
 				<h3>Connect with Me</h3>
-				<ul>
-					<li><a href="https://www.linkedin.com/in/parth-saravade-7662a2234/" target="_blank"
-																						rel="noopener noreferrer">LinkedIn</a></li>
-					<li><a href="https://github.com/PsychedelicOrange" target="_blank"
-																	   rel="noopener noreferrer">GitHub</a></li>
-					<li><a href="https://www.instagram.com/parth_saravade/">Instagram</a></li>
+				 Email: 'parthsaravade.acad' + '@gmail.com' | Discord: @psychedelicorange | 
+					<a href="https://www.linkedin.com/in/parth-saravade-7662a2234/" target="_blank"
+																						rel="noopener noreferrer">LinkedIn</a> | 
+					<a href="https://github.com/PsychedelicOrange" target="_blank"
+																	   rel="noopener noreferrer">GitHub</a> |
+					<a href="https://www.instagram.com/parth_saravade/">Instagram</a> ( I'm not active here )
 					<!-- Add more social links as needed -->
-				</ul>
 			</div>
 		</div>
 	</div>
 	<div class="copyright">
 		<div class="container">
-			<p>&copy; 2024 Parth Saravade. All Rights Reserved.</p>
+			<p>&copy; 2025 Parth Saravade. All Rights Reserved.</p>
 		</div>
 	</div>
 </footer>

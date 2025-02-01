@@ -1,0 +1,124 @@
+<!DOCTYPE html>	
+<head>
+	<!-- Metadata and boiler plate-->
+		<!-- Meta tags -->
+	<meta charset="UTF-8">
+	<meta name="description" content="article on parth's blog">
+	<meta name="keywords" content="Parth Saravade Blog PsychedelicOrange PsyOrange">
+	<meta name="author" content="Parth Saravade">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<!-- to prevent Firefox FOUC, this must be here -->
+	<script>
+		let FF_FOUC_FIX;
+	</script>
+
+	<!-- Look and feel -->
+		<!-- Favicon -->
+	<link rel="icon" type="image/png" href="../optimized_assets/psy_halftone.png" />
+		<!-- Template fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Rozha+One&display=swap" rel="stylesheet"> 
+	<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+		<!-- Template styles -->
+			<!-- Colors and fonts -->
+	<!--<link rel="stylesheet" href="template/template.css">-->
+	<link rel="stylesheet" href="template/retro.css">
+			<!-- Structure and components-->
+	<!--<link rel="stylesheet" href="template/structure.css">-->
+
+
+</head>
+<body>
+	<!-- Website header -->
+	<header>
+	<a href="../index.html">Homepage</a> | <a href="../projects.html">Projects & Portfolio</a>|
+	<a href="articles.html">Articles</a> |
+	<a href="../creative.html">Creative Corner</a> |
+	<a href="#contact">Contact</a>
+</header>
+
+	<!-- Article content from md file -->
+	<div class='content'>
+	<h1 id="building-a-dactyl-manuform">Building a dactyl-manuform</h1>
+<blockquote>
+<p>I made a crazy ergonomic 3d printed keyboard</p>
+</blockquote>
+<div class="toc">
+<ul>
+<li><a href="#building-a-dactyl-manuform">Building a dactyl-manuform</a><ul>
+<li><a href="#i-made-a-crazy-ergonomic-3d-printed-keyboard">I made a crazy ergonomic 3d printed keyboard :</a></li>
+<li><a href="#backword">Backword</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<h2 id="i-made-a-crazy-ergonomic-3d-printed-keyboard">I made a crazy ergonomic 3d printed keyboard :</h2>
+<blockquote>
+<p>26th May, 2024</p>
+</blockquote>
+<blockquote class="twitter-tweet"><p lang="en" dir="ltr">i&#39;m concerned that if programmers can 3d print their own keyboards then all productivity will halt for a period of at least five years</p>&mdash; Paul Ford (@ftrain) <a href="https://twitter.com/ftrain/status/577205992406065152?ref_src=twsrc%5Etfw">March 15, 2015</a></blockquote>
+<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+<p>The Dactyl Manuform is an open source keyboard on <a href = "https://github.com/abstracthat/dactyl-manuform">github</a>.
+It is split into two halves, and it has multiple thumb keys. I finished making mine just last week. </p>
+<p><img alt="image" src="../optimized_assets/dactylC.jpg" />
+<br>
+And it went just as planned...</p>
+<p><img alt="image" src="../optimized_assets/dactylH.jpg" />
+<br>
+Here's how you can make one:</p>
+<ul>
+<li>Generate the .stl(3d files for the case) for the dactyl manuform from this <a href='https://ryanis.cool/dactyl/#manuform:Ch0IBRAEGgNzaXgiA3R3byoDYm94MgZub3JtaWU4ABIQCMYKEKMFGMIDIAMoxgowACIXVQAAEEEYACABXQAAYEBlAAAgQEAASAAy+QGVAwAAIECdAwAAgD+AAwGIAwENAAAAABUAAAAAHeF6NEAlAACQwC0AAEDBNeF6tEA9AAAAAEUAAAAATQAAwEBVAABAwF0AAOBAZTMzYcJtMzMtwnUAALzBeOcCgAHNGIgByCSVATMzF8KdATMzXcKlAWZmysGoAZ8LsAGZF7gB/CXFAQAATMLNAQAAyMHVAQAAQMHYAZwE4AHzF+gBkBz1AQAA6MH9AQAAIMKFAgAAUMGIApsEkALzF5gC4CGlAgAAAMKtAgAAcMG1AgAAAMC4AoQHwAKVEMgChAfVAgAAQMHdAgAAgMHlAgAAQEDoAoQH8AKVEPgChAcqBggAEAAYAQ=='>website </a> </li>
+<li>I don't have a 3D printer, so I used this service from <a href='https://robu.in/product/3d-printing-service/'>robu.in</a></li>
+<li>Order keyswitches and keycaps: <a href = 'https://www.reddit.com/r/mkindia/wiki/vendors/'> Vendors in india </a> I really wanted xda keycaps, but I couldn't find them online at good rates, So i settled with dsa blanks.</li>
+<li>Order electronics : Solder equipment, arduino pro micro's, jumper wires, IN4143 Diodes, M3 3mm threaded self tap inserts, flat head screws: <a href= 'https://www.reddit.com/r/india/comments/iquweu/a_guide_for_buying_electronic_components_online/'>Vendors in india</a></li>
+<li>Build the keyboard</li>
+</ul>
+<p><img alt="image" src="../optimized_assets/dactylI.jpg" /></p>
+<ul>
+<li>Flash it with qmk and configure layout</li>
+</ul>
+<p><img alt="image" src="../optimized_assets/layer0.jpeg" /></p>
+<p><img alt="image" src="../optimized_assets/layer1.jpeg" /></p>
+<p><img alt="image" src="../optimized_assets/layer2.jpeg" /></p>
+<p>I forgot the function keys <img align="absmiddle" alt=":skull:" class="gemoji" height="20px" src="https://github.githubassets.com/images/icons/emoji/unicode/1f480.png" title=":skull:" width="20px" /></p>
+<ul>
+<li>Spend time and pain relearning how to type</li>
+<li>Bragging rights ! ?</li>
+</ul>
+<aside>I will update my experience of typing with the keyboard once I get around to using it as my main kb.</aside>
+
+<h2 id="backword">Backword</h2>
+<p>Making this keyboard made me realize how awesome but dificult it is to build anything hardware.
+Thanks to all awesome people in the keyboard community: The people who designed the keyboards, and the people that forked it, and the people that made build guides for it, so that noobs like me can even attempt this.
+See : </p>
+<ul>
+<li>The original <a href='https://github.com/adereth/dactyl-keyboard'>dactyl</a> made by Matt Adereth</li>
+<li>The <a href = 'https://github.com/abstracthat/dactyl-manuform'> dactyl manuform </a>fork by abstracthat</li>
+<li>This cool <a href='https://www.youtube.com/watch?v=CxNKWNKBLMs' > video guide </a>on how to build the keyboard</li>
+</ul>
+	</div>
+	<!-- Website footer -->
+	<footer id="contact">
+	<div class="container">
+		<div class="footer-content">
+				<h3>Connect with Me</h3>
+				 Email: 'parthsaravade.acad' + '@gmail.com' | Discord: @psychedelicorange | 
+					<a href="https://www.linkedin.com/in/parth-saravade-7662a2234/" target="_blank"
+																						rel="noopener noreferrer">LinkedIn</a> | 
+					<a href="https://github.com/PsychedelicOrange" target="_blank"
+																	   rel="noopener noreferrer">GitHub</a> |
+					<a href="https://www.instagram.com/parth_saravade/">Instagram</a> ( I'm not active here )
+					<!-- Add more social links as needed -->
+			</div>
+		</div>
+	</div>
+	<div class="copyright">
+		<div class="container">
+			<p>&copy; 2025 Parth Saravade. All Rights Reserved.</p>
+		</div>
+	</div>
+</footer>
+
+</body>
+</html>

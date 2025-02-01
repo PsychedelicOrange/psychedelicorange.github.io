@@ -1,0 +1,109 @@
+<!DOCTYPE html>	
+<head>
+	<!-- Metadata and boiler plate-->
+		<!-- Meta tags -->
+	<meta charset="UTF-8">
+	<meta name="description" content="article on parth's blog">
+	<meta name="keywords" content="Parth Saravade Blog PsychedelicOrange PsyOrange">
+	<meta name="author" content="Parth Saravade">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<!-- to prevent Firefox FOUC, this must be here -->
+	<script>
+		let FF_FOUC_FIX;
+	</script>
+
+	<!-- Look and feel -->
+		<!-- Favicon -->
+	<link rel="icon" type="image/png" href="../optimized_assets/psy_halftone.png" />
+		<!-- Template fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Rozha+One&display=swap" rel="stylesheet"> 
+	<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+		<!-- Template styles -->
+			<!-- Colors and fonts -->
+	<!--<link rel="stylesheet" href="template/template.css">-->
+	<link rel="stylesheet" href="template/retro.css">
+			<!-- Structure and components-->
+	<!--<link rel="stylesheet" href="template/structure.css">-->
+
+
+</head>
+<body>
+	<!-- Website header -->
+	<header>
+	<a href="../index.html">Homepage</a> | <a href="../projects.html">Projects & Portfolio</a>|
+	<a href="articles.html">Articles</a> |
+	<a href="../creative.html">Creative Corner</a> |
+	<a href="#contact">Contact</a>
+</header>
+
+	<!-- Article content from md file -->
+	<div class='content'>
+	<h1 id="may-24">May 24</h1>
+<blockquote>
+<p>May-be I missed April - progress on making dumbphone, playing 3d chess with valorant't text chat ban filter</p>
+</blockquote>
+<div class="toc">
+<ul>
+<li><a href="#may-24">May 24</a><ul>
+<li><a href="#progress-on-making-my-own-dumbphone-keyboards-oleds-and-fonts">Progress on making my own dumbphone: keyboards, oleds and fonts</a><ul>
+<li><a href="#adding-bitmap-fonts-for-the-phone">Adding bitmap fonts for the phone</a></li>
+<li><a href="#playing-3d-chess-with-valorants-text-chat-ban-filter">Playing 3D chess with valorant's text chat ban filter</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+<h2 id="progress-on-making-my-own-dumbphone-keyboards-oleds-and-fonts">Progress on making my own dumbphone: keyboards, oleds and fonts</h2>
+<p>I put a small 4x4 keyboard on the thing, and then put a small 128x64 oled and then spent another month making it work, cause I had to order resistors as the oled used I2C protocol which requires pull up connections between peripherals and I never thought of that mygod. Then I spent more time on figuring out the I2C address of the oled device, cause this one didn't have it printed on the pcb <img align="absmiddle" alt=":cry:" class="gemoji" height="20px" src="https://github.githubassets.com/images/icons/emoji/unicode/1f622.png" title=":cry:" width="20px" />. It was magic when I finally got it working.</p>
+<p><img alt="picture of a small oled display with letters PAASH" src="../optimized_assets/paash.jpeg" /></p>
+<h3 id="adding-bitmap-fonts-for-the-phone">Adding bitmap fonts for the phone</h3>
+<p>OH MY GOODDDDD~ Bitmap fonts are DEAD. THEY KILLED BITMAP FONTS&gt;. NO PCF PARSERS GOD HELP&gt; FONTS WERE'NT SUPPOSED TO BE THIS HARD!? IT IS SO BIZZARE, EVERYTHING I STUMBLE UPON IS ATLEAST 7 YEARS OLD&gt; THE <a href="https://github.com/ganaware/pcf2bdf">SOLUTION</a> THAT WORKED IS OLDER THAN ME !!</p>
+<p>Bitmap fonts are basically fonts stored in an array. A 1 means the pixel is lit and 0 means pixel is dark. As you can imagine these fonts date back to when computing was first started, and many of the classic fonts are from very old pc's(before I was born). Also many of these fonts are in formats whose parsers and specifications are long lost to time. So If your faviorate font was not in the format that you can parse, you just have to make it by hand in a newer format. The problem is that newer fonts are not bitmap fonts, they are vector based. This means they use math to draw/construct the font.</p>
+<p>I wanted this <a href="https://github.com/bluescan/proggyfonts">font</a>. After trying to download and use a large count of archaic parsers, converters,etc. I finally managed to extract a simple array for all characters. This I finally copied in my c code as a 2d array.</p>
+<h3 id="playing-3d-chess-with-valorants-text-chat-ban-filter">Playing 3D chess with valorant's text chat ban filter</h3>
+<p>I think cursing in a video game (at least text chat) is part of the experience for some games. It's not that I like toxicity or I am fond of swearing excesively in video games. But when an oponent is clearly cheating / smurfing, it just feels good to get your anger off the chest.So, Ladies and gentlemen, through my months of hard work and research I present to you, a list of words , try and guess if typing the word in chat will ban you. Please explore the beautiful valorant chat window i recreated for your pleasure.</p>
+<ul>
+<li>Sex: No, this will not ban you.</li>
+<li>Niger: No, this will not ban you. It's amazing that this is allowed, its due to the grace of a country having the same name.</li>
+<li>nig: Yes, this will ban you. </li>
+<li>Retarded: yes this will ban you.Come on, they are not retarded.</li>
+<li>retards: No this word will not ban you. they are retards.</li>
+<li>fuck: No, this will not ban you, for some reason.</li>
+<li>shit: NO</li>
+<li>cunt: no</li>
+<li>s p a c e separated bannable words: Yes this will get you banned. Makes me wonder what kind of algorithm they are running.</li>
+<li>KILL YOURSELF: No this will not get you banned.</li>
+<li>kys: This will get you banned.</li>
+</ul>
+<p>So, YALL ARE RETARDS KILL YOURSELF Niger -&gt; Won't get you banned in valorant</p>
+<p>Update: This guide is no longer valid. </p>
+<p><img alt="valorantBanMessage" src="../optimized_assets/ban.jpeg" /></p>
+<p>Plus, according to the highlighted point, I might get banned <img align="absmiddle" alt=":skull:" class="gemoji" height="20px" src="https://github.githubassets.com/images/icons/emoji/unicode/1f480.png" title=":skull:" width="20px" /></p>
+	</div>
+	<!-- Website footer -->
+	<footer id="contact">
+	<div class="container">
+		<div class="footer-content">
+				<h3>Connect with Me</h3>
+				 Email: 'parthsaravade.acad' + '@gmail.com' | Discord: @psychedelicorange | 
+					<a href="https://www.linkedin.com/in/parth-saravade-7662a2234/" target="_blank"
+																						rel="noopener noreferrer">LinkedIn</a> | 
+					<a href="https://github.com/PsychedelicOrange" target="_blank"
+																	   rel="noopener noreferrer">GitHub</a> |
+					<a href="https://www.instagram.com/parth_saravade/">Instagram</a> ( I'm not active here )
+					<!-- Add more social links as needed -->
+			</div>
+		</div>
+	</div>
+	<div class="copyright">
+		<div class="container">
+			<p>&copy; 2025 Parth Saravade. All Rights Reserved.</p>
+		</div>
+	</div>
+</footer>
+
+</body>
+</html>
