@@ -34,13 +34,34 @@ html, body, pre, code, kbd, samp {
 	font-family: "Jersey 20";
 	font-size: 1.25rem;
 }
+:root {
+        --color-primary: hsl(129, 50%, 90%);
+        --color-secondary: hsl(129, 50%, 10%);
+        --color-tertiary: hsl(189, 80%, 20%);
+        --color-accent: hsl(69, 80%, 20%);
+    }
+
 
 body {
   line-height: 1.45;
-  margin: 6rem auto 1rem;
+  margin: 1rem auto 1rem;
   height: 100vh;
   max-width: 48rem;
   padding: .25rem;
+  /*background-image: url('./optimized_assets/tileorangepng');*/
+  /*background-size: 30%;*/
+  /*background-repeat: repeat;*/
+  background-color: white;
+  color: black;
+}
+.projectsandportfolio{
+  backdrop-filter: blur(0.66rem);
+  background: radial-gradient(circle at center, var(--color, rgba(0, 0, 0, 0.26)) 2px, rgba(0, 0, 0, 0.5019607843) 3px);
+  background-repeat: repeat;
+  background-size: 4px 4px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 0.6ex 1.33rem -1ex rgba(0, 0, 0, 0.6);
+  padding: 1.77rem;
 }
 
 video,img {
