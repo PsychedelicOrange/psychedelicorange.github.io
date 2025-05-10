@@ -61,7 +61,7 @@ body {
   background-size: 4px 4px;
   border: 1px solid rgba(255, 255, 255, 0.2);
   box-shadow: 0 0.6ex 1.33rem -1ex rgba(0, 0, 0, 0.6);
-  padding: 1.77rem;
+  padding: 15px;
 }
 
 video,img {
