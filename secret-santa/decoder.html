@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Secret Santa Target</title>
+    <style>
+        body {
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background-color: #165b33; /* Festive Green */
+            color: white;
+            font-family: 'Segoe UI', sans-serif;
+            text-align: center;
+        }
+        #result {
+            font-size: 3rem;
+            font-weight: bold;
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="result">Decoding...</div>
+
+    <script>
+        window.onload = function() {
+            const SHIFT = 5;
+            const urlParams = new URLSearchParams(window.location.search);
+            const encoded = urlParams.get('code');
+            const display = document.getElementById('result');
+
+            if (!encoded) {
+                display.innerText = "No code found.";
+                return;
+            }
+
+            try {
+                // 1. Base64 Decode
+                const decodedB64 = atob(encoded);
+
+                // 2. Reverse Caesar
+                let finalResult = "";
+                for (let i = 0; i < decodedB64.length; i++) {
+                    let char = decodedB64[i];
+                    if (char.match(/[a-z]/i)) {
+                        let code = decodedB64.charCodeAt(i);
+                        let start = (code >= 65 && code <= 90) ? 65 : 97;
+                        finalResult += String.fromCharCode(((code - start - SHIFT + 26) % 26) + start);
+                    } else {
+                        finalResult += char;
+                    }
+                }
+                display.innerHTML = finalResult;
+            } catch (e) {
+                display.innerHTML = "Invalid Secret Santa Link";
+            }
+        };
+    </script>
+</body>
+</html>
